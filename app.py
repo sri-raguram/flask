@@ -188,6 +188,9 @@ def postJsonHandler():
     print(question,document)
     responseZero,responseOne = gpt3resp(question,document)
     return(jsonify(question=question,responseZero=responseZero,responseOne=responseOne))
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
 
 ##############################
 # RUN the FLUSK program in debugging mode#
